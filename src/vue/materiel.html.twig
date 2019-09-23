@@ -1,0 +1,63 @@
+{% extends "base.html.twig" %}
+{% block style %}<link href="css/style-signin.css" rel="stylesheet">
+{% endblock %}
+{% block title %}
+  {{ parent() }}
+Materiel
+{% endblock %}
+
+{% block contenu %}
+  {% if form.valide is defined %}
+    {% if form.valide == true %}
+      <h1 class="h3 mb-3 font-weight-normal">{{ form.message }}</h1>
+    {% else %}
+      <h1 class="alert alert-danger" role="alert">{{ form.message }}</h1>
+    {% endif %}
+  {% endif %}
+
+  <h1>
+   Materiel
+  </h1>
+  <div style="color:black" class="panel panel-default">
+    <form class="form-signin"  action="index.php?page=materiel" method="post" enctype="application/x-www-form-urlencoded">
+      <!-- Table -->
+      <div class="table-responsive">
+        <table style="color:black" class="table table-hover table-striped">
+          <tr>
+            <thead>
+    <tr>
+      <th scope="col">Materiel</th>
+      <th scope="col">Contenu</th>
+      <th scope="col">Quantité</th>
+      
+    
+    </tr>
+  </thead>
+
+          
+          {% for m in liste %}
+            <tr> 
+              <td>{{m.nomMat}}</td>
+              <td>{{m.comMat}}</td>
+              <td>{{m.Quantite}}</td>
+              
+                <td><div class="btn-group btn-group-lg"><a href="index.php?page=materiel&id={{m.id}}"><span class="glyphicon glyphicon-trash" ariahidden="true"></span></a></div></td>
+
+
+    
+
+            </tr>
+
+          {% endfor %}
+        </table>
+      </div>
+
+    
+    </form>
+    
+     <button class="btn btn-lg btn-danger btn-block" type="submit"
+name="btSupprimer">Supprimer</button>
+
+    
+  </div>
+{% endblock %}

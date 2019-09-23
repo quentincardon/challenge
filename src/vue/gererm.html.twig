@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+{% block style %}<link href="css/style-signin.css" rel="stylesheet"> {% endblock %}
+{% block title %} {{ parent() }} Se connecter {% endblock %}
+
+{% block contenu %}
+
+ <form class="form-signin" action="index.php?page=gererm" method="post" enctype="multipart/form-data">
+
+        <h1 class="h3 mb-3 font-weight-normal">Ajouter du materiel</h1>
+        <input hidden="id" />
+        <input type="text" id="materiel" name="materiel" class="form-control"placeholder="Entrer le nom du materiel" required autofocus>
+        <input type="text" id="contenu" name="contenu" class="form-control"placeholder="Entrer le contenu" required autofocus>
+        <input type="int" id="quantite" name="quantite" class="form-control"placeholder="Saisir la quantité" required autofocus>
+        </br>
+        <button class="btn btn-lg btn-danger btn-block" type="submit" name="btGererm">Ajouter du materiel</button>
+        <a href="index.php?page=materiel" class="btn btn-lg btn-danger btn-block">Liste du materiel</a>
+ </form>
+
+
+ {% endblock %}
+ 

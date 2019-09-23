@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+{% block style %}<link href="css/style-signin.css" rel="stylesheet"> {% endblock %}
+{% block title %} {{ parent() }} Se connecter {% endblock %}
+
+{% block contenu %}
+
+ <form class="form-signin" action="index.php?page=gererc" method="post" enctype="multipart/form-data">
+
+        <h1 class="h3 mb-3 font-weight-normal">Ajout du patient</h1>
+        <input hidden="id" />
+        <input type="heure" id="heure" name="heure" class="form-control"placeholder="Entrer l'heure" required autofocus>
+        <input type="text" id="nom" name="nom" class="form-control"placeholder="Entrer le nom du patient" required autofocus>
+        <input type="text" id="prenom" name="prenom" class="form-control"placeholder="Entrer le prénom du patient" required autofocus>
+        <input type="date" id="datenaiss" name="datenaiss" class="form-control"placeholder="Entrer la date de naissance du patient" required autofocus>
+        <input type="varchar" id="adresse" name="adresse" class="form-control"placeholder="Saisir l'adresse du patient" required autofocus>
+        <input type="varchar" id="numtel" name="numtel" class="form-control"placeholder="Saisir le numéro du patient" required autofocus>
+        <input type="int" id="int" name="int" class="form-control"placeholder="Entrer le montant" required autofocus>
+        </br>
+        <button class="btn btn-lg btn-danger btn-block" type="submit" name="btGererc">Ajouter un rendez-vous</button>
+        <a href="index.php?page=consultations" class="btn btn-lg btn-danger btn-block">Consultations</a>
+ </form>
+
+
+ {% endblock %}
+ 

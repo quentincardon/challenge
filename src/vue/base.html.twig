@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <title>Projet{% block title %}{% endblock %}
+    </title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    {% block body %}
+      {%block photo %}
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-md-12">
+
+                <center><img id="waw" alt="Bootstrap Image Preview" src="../web/images/fond.png"></center>
+            </div>
+          </div>
+        </div>
+        </br>
+        </br>
+        <div class="row">
+            
+          <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+
+              {% if session.login is defined %}
+              <h4>
+                <center>
+                  {{session.login}}</center>
+              </h4>
+            {% endif %}
+              </div>
+              <ul class="nav navbar-nav">
+
+                <li>
+                  <a href="index.php?page=index">Accueil</a>
+                </li>
+
+                <li>
+                  <a href="index.php?page=patients">Patients</a>
+                </li>
+
+                <li>
+                  <a href="index.php?page=gererpa">Ajouter Patients</a>
+                </li>
+                
+                <li>
+                  <a href="index.php?page=consultation">Consultations</a>
+                </li>
+                
+                <li>
+                  <a href="index.php?page=gererc">Completer consultations</a>
+                </li>
+                
+                <li>
+                  <a href="index.php?page=materiel">Matériel</a>
+                </li>
+                
+                <li>
+                  <a href="index.php?page=gererm">Ajouter Matériel</a>
+                </li>
+                
+                <li>
+                  <a href="index.php?page=connexion">Se connecter</a>
+                </li>
+                
+                <li>
+                  <a href="index.php?page=inscrire">Inscription</a>
+                </li>
+               
+
+            </div>
+          </nav>
+
+
+        </br>
+      </br>
+
+    </div>
+            
+  {% endblock %}
+
+  {% block contenu %}
+
+  {% endblock %}
+
+{% endblock %}
+<!-- Bootstrap core JavaScript ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery3.2.1.min.js">')</script></script>
+ <script src="js/bootstrap.min.js"></script>
+   <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+
+</body>
+</br>
+</br>
+
+<footer>
+    <hr>
+
+    <p><center>All rigth reserved <li>
+      <a href="index.php?page=mentions">Mentions légales</a>
+    </li></center></p>
+<hr>
+</footer>
+</html>

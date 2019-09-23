@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+{% block style %}<link href="css/style-signin.css" rel="stylesheet"> {% endblock %}
+{% block title %} {{ parent() }} Se connecter {% endblock %}
+
+{% block contenu %}
+
+ <form class="form-signin" action="index.php?page=gererpa" method="post" enctype="multipart/form-data">
+
+        <h1 class="h3 mb-3 font-weight-normal">Ajouter du patient</h1>
+        <input hidden="id" />
+        <input type="text" id="nom" name="nom" class="form-control"placeholder="Entrer le nom du patient" required autofocus>
+        <input type="text" id="prenom" name="prenom" class="form-control"placeholder="Entrer le prénom du patient" required autofocus>
+        <input type="date" id="datenaiss" name="datenaiss" class="form-control"placeholder="Entrer la date de naissance du patient" required autofocus>
+        <input type="varchar" id="adresse" name="adresse" class="form-control"placeholder="Saisir l'adresse du patient" required autofocus>
+        <input type="varchar" id="numtel" name="numtel" class="form-control"placeholder="Saisir le numéro de téléphone du patient" required autofocus>
+        </br>
+        <button class="btn btn-lg btn-danger btn-block" type="submit" name="btGererpa">Ajouter un patient</button>
+        <a href="index.php?page=patients" class="btn btn-lg btn-danger btn-block">Liste patients</a>
+ </form>
+
+
+ {% endblock %}
+ 
